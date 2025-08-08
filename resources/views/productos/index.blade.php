@@ -26,8 +26,11 @@
                 <tr>
                     <th>Nombre</th>
                     <th>Descripción</th>
+                    <th>Color</th>
                     <th>Precio</th>
                     <th>Stock</th>
+                    <th>Categoría</th>
+                    
                     <th style="width: 150px;">Acciones</th>
                 </tr>
             </thead>
@@ -36,8 +39,11 @@
                     <tr>
                         <td>{{ $producto->nombre }}</td>
                         <td>{{ $producto->descripcion }}</td>
+                        <td>{{ $producto->color }}</td>
                         <td>${{ number_format($producto->precio, 2) }}</td>
                         <td>{{ $producto->stock }}</td>
+                        <td>{{ $producto->categoria->nombre ?? 'Sin categoría' }}</td>
+                    
                         <td>
                             <a href="{{ route('productos.edit', $producto->id) }}" class="btn btn-sm btn-warning">
                                 <i class="bi bi-pencil-square"></i> Editar

@@ -23,7 +23,7 @@
     <h2>Crear Producto</h2>
     <form action="{{ route('productos.store') }}" method="POST">
         @csrf
-        @include('productos.form')
+        @include('productos.form')        
         <button type="submit" class="btn btn-primary">Guardar</button>
         <a href="{{ route('productos.index') }}" class="btn btn-secondary">Cancelar</a>
     </form>
